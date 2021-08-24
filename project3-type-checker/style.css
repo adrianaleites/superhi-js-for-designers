@@ -1,0 +1,157 @@
+@font-face {
+  font-family: "Faune";
+  src: url(assets/faune-regular.woff2), url(assets/faune-regular.woff);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Faune";
+  src: url(assets/faune-italic.woff2), url(assets/faune-italic.woff);
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Faune";
+  src: url(assets/faune-bold.woff2), url(assets/faune-bold.woff);
+  font-weight: 700;
+  font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+  text-rendering: geometricPrecision;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Faune", Arial;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #2a2a2a;
+  color: #ffffff;
+  margin: 0 0 0 280px;
+}
+
+section.options {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 280px;
+  padding: 40px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 24px;
+  margin: 0;
+}
+
+.option {
+  margin-top: 24px;
+}
+
+.option label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.option label span {
+  float: right;
+  font-style: italic;
+}
+
+.option input[type="text"], .option select {
+  font: inherit;
+  width: 100%;
+  background-color: #575757;
+  color: #ffffff;
+  border: 1px solid #575757;
+  outline: none;
+  padding: 4px 8px;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.option input[type="text"]:focus-visible, .option select:focus-visible {
+  border-color: #ffffff;
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+}
+
+.option input[type="range"] {
+  width: 100%;
+  margin: 0;
+}
+
+.option.option-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.option.option-checkbox label {
+  margin-bottom: 0;
+}
+
+.option input[type="checkbox"] {
+  margin: 0 0 0 8px;
+}
+
+.option #colors {
+  display: flex;
+}
+
+.option #colors button {
+  font: inherit;
+  padding: 0;
+  background: none;
+  border: 2px solid #575757;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.option #colors button[aria-current] {
+  border-color: #ffffff;
+}
+
+.option #colors button .button-colors {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.option #colors button span {
+  line-height: 30px;
+}
+
+textarea.text-output {
+  display: block;
+  font: inherit;
+  font-size: 120px;
+  line-height: 1.25;
+  width: 100%;
+  background: none;
+  border: none;
+  color: #ffffff;
+  outline: none;
+  min-height: 100vh;
+  padding: 80px;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  transition: all 0.3s ease-in-out;
+}

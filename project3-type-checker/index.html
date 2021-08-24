@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Type Checker</title>
+    <meta name="description" content="Project 3 of the SuperHi's online short course JavaScript for Designers.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <section class="options">
+      <h1>Type Checker</h1>
+
+      <div class="option">
+        <label for="text-input">Your text</label>
+        <input id="text-input" type="text" name="sentence" placeholder="Type something...">
+      </div>
+
+      <div class="option">
+        <label for="typeface-select">Typeface</label>
+        <select id="typeface-select" name="typeface">
+          <option value="Fira Sans Condensed, sans-serif">Fira Sans Condensed</option>
+          <option value="Prompt, sans-serif">Prompt</option>
+          <option value="Taviraj, serif">Taviraj</option>
+          <option value="Tomorrow, sans-serif">Tomorrow</option>
+        </select>
+      </div>
+
+      <div class="option">
+        <label for="type-size-range">Type size <span class="type-size-current-value">120px</span></label>
+        <input id="type-size-range" type="range" name="type-size" min="12" max="200" value="120">
+      </div>
+
+      <div class="option">
+        <label for="font-weight-range">Font weight <span class="font-weight-current-value">400</span></label>
+        <input id="font-weight-range" type="range" name="font-weight" min="100" max="900" value="400" step="100">
+      </div>
+
+      <div class="option">
+        <label for="line-height-range">Leading <span class="line-height-current-value">1.25</span></label>
+        <input id="line-height-range" type="range" name="line-height" min="0.75" max="2" value="1.25" step="0.25">
+      </div>
+
+      <div class="option option-checkbox">
+        <label for="italic-checkbox">Italic</label>
+        <input id="italic-checkbox" type="checkbox" name="italic">
+      </div>
+
+      <div class="option">
+        <label for="colors">Colors</label>
+        <div id="colors">
+          <button aria-label="Dark gray background" aria-current="true">
+            <div class="button-colors" style="background-color: #2a2a2a; color: #ffffff"><span>A</span></div>
+          </button>
+          <button aria-label="White background">
+            <div class="button-colors" style="background-color: #ffffff; color: #2a2a2a"><span>A</span></div>
+          </button>
+          <button aria-label="Lime green background">
+            <div class="button-colors" style="background-color: #63ff03; color: #2a2a2a"><span>A</span></div>
+          </button>
+          <button aria-label="Pink background">
+            <div class="button-colors" style="background-color: #ee0073; color: #ffffff"><span>A</span></div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <textarea class="text-output">The quick brown fox jumps over the lazy dog</textarea>
+
+    <script src="type-checker.js"></script>
+  </body>
+</html>
